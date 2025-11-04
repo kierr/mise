@@ -3355,6 +3355,11 @@ backends = ["ubi:ocaml/opam", "asdf:asdf-community/asdf-opam"]
 description = "(ocaml) opam is a source-based package manager. It supports multiple simultaneous compiler installations, flexible package constraints, and a Git-friendly development workflow"
 test = ["opam --version", "{{version}}"]
 
+[tools.omnictl]
+backends = ["aqua:siderolabs/omni/omnictl", "ubi:siderolabs/omni[exe=omnictl]"]
+description = "CLI for Omni - SideroLabs' Kubernetes management platform for bare metal deployments"
+test = ["omnictl --version", "omnictl version v{{version}}"]
+
 [tools.openbao]
 backends = ["github:openbao/openbao[exe=bao]"]
 description = "OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys"
@@ -3367,6 +3372,11 @@ test = ["opencode --version", "{{version}}"]
 [tools.openfaas-cli]
 backends = ["aqua:openfaas/faas-cli", "asdf:zekker6/asdf-faas-cli"]
 description = "Official CLI for OpenFaaS"
+
+[tools.opengrep]
+backends = ["aqua:opengrep/opengrep", "ubi:opengrep/opengrep"]
+description = "Static code analysis engine to find security issues in code"
+test = ["opengrep --version", "{{version}}"]
 
 [tools.openresty]
 backends = ["asdf:mise-plugins/mise-openresty"]
@@ -4290,6 +4300,11 @@ backends = ["aqua:yorukot/superfile"]
 description = "Pretty fancy and modern terminal file manager"
 test = ["spf --version", "superfile version v{{version}}"]
 
+[tools.superhtml]
+backends = ["ubi:kristoff-it/superhtml"]
+description = "HTML Validator, Formatter, LSP, and Templating Language Library"
+test = ["superhtml version 2>&1", "{{version}}"]
+
 [tools.sver]
 backends = ["aqua:mitoma/sver", "asdf:robzr/asdf-sver"]
 description = "Version generator based on source code"
@@ -5099,6 +5114,11 @@ test = ["zephyr --version", "{{version}}"]
 [tools.zig]
 backends = ["core:zig"]
 description = "Zig is a general-purpose programming language and toolchain for maintaining robust, optimal and reusable software"
+
+[tools.fnox]
+backends = ["github:jdx/fnox"]
+description = "Fort Knox for your secrets"
+test = ["fnox --version", "fnox {{version}}"]
 
 [tools.zigmod]
 backends = ["github:nektro/zigmod", "asdf:mise-plugins/asdf-zigmod"]

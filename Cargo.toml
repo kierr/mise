@@ -3,7 +3,7 @@ members = ["crates/vfox", "crates/aqua-registry"]
 
 [package]
 name = "mise"
-version = "2025.10.10"
+version = "2025.10.18"
 edition = "2024"
 description = "The front-end to your dev env"
 authors = ["Jeff Dickey (@jdx)"]
@@ -117,6 +117,7 @@ reqwest = { version = "0.12", default-features = false, features = [
   "zstd",
   "charset",
   "http2",
+  "socks",
   "macos-system-configuration",
 ] }
 rmcp = { version = "0.3", features = ["server", "transport-io", "schemars"] }
